@@ -6,21 +6,22 @@
         <link href="../dist/output.css" rel="stylesheet">
         <title>Dan Neag - Code and Artwork</title>
     </head>
-    <body class="bg-slate-300 h-screen">
+    <body class="bg-slate-50 h-screen">
         <div class="border-2" style="height: 11%;">
             <h1 class="text-5xl text-inherit font-light px-12 pt-5">Dan Neag - Portfolio</h1>
             <hr class="h-px my-3 border-0 bg-gradient-to-r from-gray-700">
         </div>
         
-        <div class="border-4 border-red-600 overflow-scroll" 
+        <div class="overflow-scroll" 
              style="height: 89%; max-height: 89%; display: grid; grid-template-columns: minmax(0,2fr) 8fr;">
              <!-- Note to self: regarding the above style attribute, by default, grid columns have a minimum width
                 of the content inside them, which can cause overflows to behave unexpectedly.  To avoid this, 
                 explicitly set the minimum width of the column - done here with minmax -->
-            <div class="border-4 border-blue-600 pl-14 pt-2 overflow-clip">
+            <div class=" bg-slate-200 pl-14 mt-2 rounded-lg overflow-clip">
                 <div>
                     <button onclick="goToResume()" 
-                            class="font-light hover:text-gray-400" style="font-size: 32px;">Resume</button>
+                            class="font-light hover:text-gray-400"
+                            style="font-size: 32px;">Resume</button>
                     <hr class="h-px w-4/5 border-0 bg-gradient-to-r from-gray-700">
                 </div>
                 <div class="mt-4 font-light space-y-1" style="font-size: 19px;">
@@ -28,7 +29,7 @@
                     <button onclick="openDDK()" class="hover:text-gray-400">DDK Review</button>
                 </div>
             </div>
-            <div class="border-4 border-green-600">
+            <div class="mt-2 rounded-lg">
                 <iframe id="contentDisplay" src="" style="height:100%;width:100%"></iframe>
             </div>
         </div>
