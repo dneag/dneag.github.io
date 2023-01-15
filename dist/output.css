@@ -522,6 +522,14 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .grid {
   display: grid;
 }
