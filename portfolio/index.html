@@ -17,25 +17,20 @@
              <!-- Note to self: regarding the above style attribute, by default, grid columns have a minimum width
                 of the content inside them, which can cause overflows to behave unexpectedly.  To avoid this, 
                 explicitly set the minimum width of the column - done here with minmax -->
-            <div class="border-4 border-blue-600 pl-12 overflow-clip">
+            <div class="border-4 border-blue-600 pl-14 pt-2 overflow-clip">
                 <div>
                     <button onclick="goToResume()" 
-                            class="font-light hover:text-gray-400" style="font-size: 30px;">Resume</button>
+                            class="font-light hover:text-gray-400" style="font-size: 32px;">Resume</button>
                     <hr class="h-px w-4/5 border-0 bg-gradient-to-r from-gray-700">
                 </div>
-                <div class="mt-4">
-                    <a href="https://dneag.github.io/tag-review/" target="_blank">DDK Review</a>
+                <div class="mt-4 font-light space-y-1" style="font-size: 19px;">
+                    <button onclick="openTrees()" class="hover:text-gray-400">Trees</button><br>
+                    <button onclick="openDDK()" class="hover:text-gray-400">DDK Review</button>
                 </div>
             </div>
             <div class="border-4 border-green-600">
                 <iframe id="contentDisplay" src="" style="height:100%;width:100%"></iframe>
             </div>
-            <!-- <div class="border-4 border-blue-600">
-                
-            </div>
-            <div>
-                <div class="m-64 text-center"> Under Construction...</div>
-            </div> -->
         </div>
     </body>
 </html>
@@ -45,6 +40,21 @@
 function goToResume() {
 
     document.getElementById("contentDisplay").src = "Dan_Neag_Resume.pdf"
+}
+
+function openTrees() {
+
+    document.getElementById("contentDisplay").src = "trees.html"
+}
+
+function openDDK() {
+
+    document.getElementById("contentDisplay").src = "ddk-review.html"
+}
+
+function openTreesSubList() {
+
+
 }
 
 </script>
