@@ -513,10 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -525,11 +521,6 @@ video {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
 }
 
 .mt-8 {
@@ -566,10 +557,6 @@ video {
 
 .w-4\/5 {
   width: 80%;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -635,10 +622,6 @@ video {
   padding-left: 3.5rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -646,6 +629,10 @@ video {
 
 .font-light {
   font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .text-inherit {
