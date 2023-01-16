@@ -6,7 +6,7 @@
         <link href="../dist/output.css" rel="stylesheet">
         <title>Dan Neag - Code and Artwork</title>
     </head>
-    <body class="bg-slate-50 h-screen">
+    <body class="bg-slate-50 h-screen" onload="handleQueryString()">
         <div class="border-2" style="height: 11%;">
             <h1 class="text-5xl text-inherit font-light px-12 pt-5">Dan Neag - Portfolio</h1>
             <hr class="h-px my-3 border-0 bg-gradient-to-r from-gray-700">
@@ -19,14 +19,14 @@
                 explicitly set the minimum width of the column - done here with minmax -->
             <div class=" bg-slate-200 pl-14 mt-2 rounded-lg overflow-clip">
                 <div>
-                    <button onclick="goToResume()" 
+                    <button onclick="setContentDisplay('Dan_Neag_Resume.pdf')" 
                             class="font-light hover:text-gray-400"
                             style="font-size: 32px;">Resume</button>
                     <hr class="h-px w-4/5 border-0 bg-gradient-to-r from-gray-700">
                 </div>
                 <div class="mt-4 font-light space-y-1" style="font-size: 19px;">
-                    <button onclick="openTrees()" class="hover:text-gray-400">Trees</button><br>
-                    <button onclick="openDDK()" class="hover:text-gray-400">DDK Review</button>
+                    <button onclick="setContentDisplay('trees.html')" class="hover:text-gray-400">Trees</button><br>
+                    <button onclick="setContentDisplay('ddk-review.html')" class="hover:text-gray-400">DDK Review</button>
                 </div>
             </div>
             <div class="mt-2 rounded-lg">
@@ -38,24 +38,22 @@
 
 <script>
 
-function goToResume() {
+function setContentDisplay(page) {
 
-    document.getElementById("contentDisplay").src = "Dan_Neag_Resume.pdf"
+    document.getElementById("contentDisplay").src = page
 }
 
-function openTrees() {
+function handleQueryString() {
 
-    document.getElementById("contentDisplay").src = "trees.html"
-}
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
 
-function openDDK() {
-
-    document.getElementById("contentDisplay").src = "ddk-review.html"
-}
-
-function openTreesSubList() {
-
-
+        var pair = vars[i].split('=');
+        if (pair[0] == 'contentDisplay') {
+            setContentDisplay(pair[1])
+        }
+    }
 }
 
 </script>
