@@ -7,9 +7,9 @@
         <link href="../dist/output.css" rel="stylesheet">
         <title>DDK Review</title>
     </head>
-    <body class="bg-inherit">
-        <div class="mx-16 mt-8 font-light">
-            <p class="mb-4">
+    <body class="bg-inherit overflow-y-scroll">
+        <div class="w-full mx-16 mt-8 font-light">
+            <p class="mb-4" style="width: 780px">
 DDK Review was a semester-long Database Management group project completed by myself and
 fellow classmates, Doug Rudy and Kent Hoang.  The plan was to create a video game search-and-review
 website where users would rate games' tags rather than giving a single score.  While there is 
@@ -21,7 +21,53 @@ The game data for the website is accessed through the rawg.io API.
             </p>
             <a href="https://dneag.github.io/tag-review/" target="_blank"
                class="hover:text-gray-400 font-normal">Website Link</a>
+
+            <p class="mb-1 mt-4">My Contribution:</p>
+            <button onclick="toggleSchema()"
+                    class="bg-slate-200 rounded-sm w-5/6 text-left pl-4">
+                    Help design database schema
+                    <p id="collapseSymbol" class="float-right text-lg pr-4">+</p>
+            </button>
+            <div id="schemaDiv" class="max-h-0 w-screen overflow-hidden" style="transition: max-height 0.2s ease-out;">
+                <img id="schemaImg" src="DDK-Review-Schema.jpg" class="m-4 rounded-xl border-2 border-gray-700">
+            </div>
         </div>
-        
     </body>
 </html>
+
+<script>
+
+let schemaImageNatHeight = document.getElementById("schemaImg").naturalHeight
+
+function toggleSchema() {
+
+    let imageOpenedHeight = schemaImageNatHeight.toString() + "px"
+    let image = document.getElementById("schemaDiv")
+    
+    if (image.style.maxHeight != imageOpenedHeight) {
+        image.style.maxHeight = imageOpenedHeight
+        document.getElementById("collapseSymbol").innerHTML = "--"
+    }
+    else {
+        image.style.maxHeight = "0px"
+        document.getElementById("collapseSymbol").innerHTML = "+"
+    }
+}
+    // var coll = document.getElementsByClassName("collapsible");
+    // var i;
+    
+    // for (i = 0; i < coll.length; i++) {
+
+    //     coll[i].addEventListener("click", function() {
+
+    //         this.classList.toggle("active");
+    //         var content = this.nextElementSibling;
+    //         if (content.style.display === "block") {
+    //             content.style.display = "none";
+    //         } else {
+    //             content.style.display = "block";
+    //         }
+    //     });
+    // }
+
+</script>
