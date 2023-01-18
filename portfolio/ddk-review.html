@@ -22,15 +22,33 @@ The game data for the website is accessed through the rawg.io API.
             <a href="https://dneag.github.io/tag-review/" target="_blank"
                class="hover:text-gray-400 font-normal">Website Link</a>
 
-            <p class="mb-1 mt-4">My Contribution:</p>
+            <p class="my-1">My Contribution:</p>
+
             <button onclick="toggleSchema()"
-                    class="bg-slate-200 rounded-sm w-5/6 text-left pl-4 relative hover:bg-slate-300">
+                    class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Help design database schema
                     <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
                          style="top: 50%; transform: translateY(-50%); right: 12px;">
             </button>
             <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
                 <img id="schemaImg" src="media/ddk/DDK-Review-Schema.jpg" class="mx-auto my-4 rounded-xl border-2 border-gray-700">
+            </div>
+            <button onclick="toggleStoredProcedures()"
+                    class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
+                    Write all stored procedures
+                    <img id="spCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
+                         style="top: 50%; transform: translateY(-50%); right: 12px;">
+            </button>
+            <div id="storedProceduresButtonsDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
+                <button onclick="toggleGetCarousel()"
+                    class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
+                    get_carousel()
+                    <img id="getCaroCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
+                         style="top: 50%; transform: translateY(-50%); right: 12px;">
+                </button>
+                <div id="getCarouselDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
+                    <img id="getCarouselImg" src="media/ddk/get_carousel.png" class=" my-4 rounded-xl border-2 border-gray-700">
+                </div>
             </div>
         </div>
     </body>
@@ -39,18 +57,50 @@ The game data for the website is accessed through the rawg.io API.
 <script>
 
 let schemaImageDivHeight = document.getElementById("schemaImg").naturalHeight + 96
-let imageOpenedHeight = schemaImageDivHeight.toString() + "px"
+let schemaImageOpenedHeight = schemaImageDivHeight.toString() + "px"
 let schemaDiv = document.getElementById("schemaDiv")
 
 function toggleSchema() {
     
-    if (schemaDiv.style.maxHeight != imageOpenedHeight) {
-        schemaDiv.style.maxHeight = imageOpenedHeight
+    if (schemaDiv.style.maxHeight != schemaImageOpenedHeight) {
+        schemaDiv.style.maxHeight = schemaImageOpenedHeight
         document.getElementById("schemaCollapseSymbol").src = "media/ddk/minus_sign.svg"
     }
     else {
         schemaDiv.style.maxHeight = "0px"
         document.getElementById("schemaCollapseSymbol").src = "media/ddk/plus_sign.svg"
+    }
+}
+
+let getCarouselImageDivHeight = document.getElementById("getCarouselImg").naturalHeight + 96
+let getCarouselImageOpenedHeight = getCarouselImageDivHeight.toString() + "px"
+let getCarouselDiv = document.getElementById("getCarouselDiv")
+
+function toggleGetCarousel() {
+    
+    if (getCarouselDiv.style.maxHeight != getCarouselImageOpenedHeight) {
+        getCarouselDiv.style.maxHeight = getCarouselImageOpenedHeight
+        document.getElementById("getCaroCollapseSymbol").src = "media/ddk/minus_sign.svg"
+    }
+    else {
+        getCarouselDiv.style.maxHeight = "0px"
+        document.getElementById("getCaroCollapseSymbol").src = "media/ddk/plus_sign.svg"
+    }
+}
+
+let heightNeededForStoredProcedures = getCarouselImageDivHeight
+heightNeededForStoredProcedures = heightNeededForStoredProcedures.toString() + "px"
+let storedProceduresDiv = document.getElementById("storedProceduresButtonsDiv")
+
+function toggleStoredProcedures() {
+    
+    if (storedProceduresDiv.style.maxHeight != heightNeededForStoredProcedures) {
+        storedProceduresDiv.style.maxHeight = heightNeededForStoredProcedures
+        document.getElementById("spCollapseSymbol").src = "media/ddk/minus_sign.svg"
+    }
+    else {
+        storedProceduresDiv.style.maxHeight = "0px"
+        document.getElementById("spCollapseSymbol").src = "media/ddk/plus_sign.svg"
     }
 }
 
