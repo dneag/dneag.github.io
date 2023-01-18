@@ -24,12 +24,13 @@ The game data for the website is accessed through the rawg.io API.
 
             <p class="mb-1 mt-4">My Contribution:</p>
             <button onclick="toggleSchema()"
-                    class="bg-slate-200 rounded-sm w-5/6 text-left pl-4">
+                    class="bg-slate-200 rounded-sm w-5/6 text-left pl-4 relative hover:bg-slate-300">
                     Help design database schema
-                    <p id="collapseSymbol" class="float-right text-lg pr-4">+</p>
+                    <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
+                         style="top: 50%; transform: translateY(-50%); right: 12px;">
             </button>
-            <div id="schemaDiv" class="max-h-0 w-screen overflow-hidden" style="transition: max-height 0.2s ease-out;">
-                <img id="schemaImg" src="DDK-Review-Schema.jpg" class="m-4 rounded-xl border-2 border-gray-700">
+            <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
+                <img id="schemaImg" src="media/ddk/DDK-Review-Schema.jpg" class="mx-auto my-4 rounded-xl border-2 border-gray-700">
             </div>
         </div>
     </body>
@@ -37,37 +38,20 @@ The game data for the website is accessed through the rawg.io API.
 
 <script>
 
-let schemaImageNatHeight = document.getElementById("schemaImg").naturalHeight
+let schemaImageDivHeight = document.getElementById("schemaImg").naturalHeight + 96
+let imageOpenedHeight = schemaImageDivHeight.toString() + "px"
+let schemaDiv = document.getElementById("schemaDiv")
 
 function toggleSchema() {
-
-    let imageOpenedHeight = schemaImageNatHeight.toString() + "px"
-    let image = document.getElementById("schemaDiv")
     
-    if (image.style.maxHeight != imageOpenedHeight) {
-        image.style.maxHeight = imageOpenedHeight
-        document.getElementById("collapseSymbol").innerHTML = "--"
+    if (schemaDiv.style.maxHeight != imageOpenedHeight) {
+        schemaDiv.style.maxHeight = imageOpenedHeight
+        document.getElementById("schemaCollapseSymbol").src = "media/ddk/minus_sign.svg"
     }
     else {
-        image.style.maxHeight = "0px"
-        document.getElementById("collapseSymbol").innerHTML = "+"
+        schemaDiv.style.maxHeight = "0px"
+        document.getElementById("schemaCollapseSymbol").src = "media/ddk/plus_sign.svg"
     }
 }
-    // var coll = document.getElementsByClassName("collapsible");
-    // var i;
-    
-    // for (i = 0; i < coll.length; i++) {
-
-    //     coll[i].addEventListener("click", function() {
-
-    //         this.classList.toggle("active");
-    //         var content = this.nextElementSibling;
-    //         if (content.style.display === "block") {
-    //             content.style.display = "none";
-    //         } else {
-    //             content.style.display = "block";
-    //         }
-    //     });
-    // }
 
 </script>
