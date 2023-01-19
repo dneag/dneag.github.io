@@ -61,15 +61,18 @@ let schemaImageOpenedHeight = schemaImageDivHeight.toString() + "px"
 let schemaDiv = document.getElementById("schemaDiv")
 
 function toggleSchema() {
-    
+    console.log("schema image height when opened: ", schemaImageOpenedHeight)
     if (schemaDiv.style.maxHeight != schemaImageOpenedHeight) {
         schemaDiv.style.maxHeight = schemaImageOpenedHeight
         document.getElementById("schemaCollapseSymbol").src = "media/ddk/minus_sign.svg"
+        console.log("exiting with maxheight: ", schemaDiv.style.maxHeight )
     }
     else {
         schemaDiv.style.maxHeight = "0px"
         document.getElementById("schemaCollapseSymbol").src = "media/ddk/plus_sign.svg"
+        console.log("exiting with maxheight: ", schemaDiv.style.maxHeight )
     }
+    
 }
 
 let getCarouselImageDivHeight = document.getElementById("getCarouselImg").naturalHeight + 96
