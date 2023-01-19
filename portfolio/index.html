@@ -47,7 +47,7 @@ navButtons.set('trees.html', document.getElementById("treesButton"));
 navButtons.set('ddk-review.html', document.getElementById("ddkButton"));
 
 function setContentDisplay(newPage) {
-    
+    console.log(document.getElementById("contentDisplay").src)
     let currentPage = document.getElementById("contentDisplay").src.split('/');
     currentPage = currentPage[currentPage.length - 1]
 
@@ -63,15 +63,6 @@ function setContentDisplay(newPage) {
 
         document.getElementById("contentDisplay").src = newPage
     }
-    
-
-    
-    // if (page == 'trees.html') {
-    //     treesButton.classList.add(buttonFade[0], buttonFade[1])
-    //     treesButton.classList.remove(buttonFade[0], buttonFade[1])
-    // }
-
-    // document.getElementById("contentDisplay").src = page
 }
 
 function handleQueryString() {
