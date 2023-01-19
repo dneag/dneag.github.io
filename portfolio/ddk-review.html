@@ -56,11 +56,12 @@ The game data for the website is accessed through the rawg.io API.
 
 <script>
 
-let schemaImageDivHeight = document.getElementById("schemaImg").naturalHeight + 96
-let schemaImageOpenedHeight = schemaImageDivHeight.toString() + "px"
-let schemaDiv = document.getElementById("schemaDiv")
-
 function toggleSchema() {
+
+    let schemaImageDivHeight = document.getElementById("schemaImg").naturalHeight + 96
+    let schemaImageOpenedHeight = schemaImageDivHeight.toString() + "px"
+    let schemaDiv = document.getElementById("schemaDiv")
+
     console.log("schema image height when opened: ", schemaImageOpenedHeight)
     if (schemaDiv.style.maxHeight != schemaImageOpenedHeight) {
         schemaDiv.style.maxHeight = schemaImageOpenedHeight
@@ -75,12 +76,12 @@ function toggleSchema() {
     
 }
 
-let getCarouselImageDivHeight = document.getElementById("getCarouselImg").naturalHeight + 96
-let getCarouselImageOpenedHeight = getCarouselImageDivHeight.toString() + "px"
-let getCarouselDiv = document.getElementById("getCarouselDiv")
-
 function toggleGetCarousel() {
     
+    let getCarouselImageDivHeight = document.getElementById("getCarouselImg").naturalHeight + 96
+    let getCarouselImageOpenedHeight = getCarouselImageDivHeight.toString() + "px"
+    let getCarouselDiv = document.getElementById("getCarouselDiv")
+
     if (getCarouselDiv.style.maxHeight != getCarouselImageOpenedHeight) {
         getCarouselDiv.style.maxHeight = getCarouselImageOpenedHeight
         document.getElementById("getCaroCollapseSymbol").src = "media/ddk/minus_sign.svg"
@@ -91,12 +92,12 @@ function toggleGetCarousel() {
     }
 }
 
-let heightNeededForStoredProcedures = getCarouselImageDivHeight
-heightNeededForStoredProcedures = heightNeededForStoredProcedures.toString() + "px"
-let storedProceduresDiv = document.getElementById("storedProceduresButtonsDiv")
-
 function toggleStoredProcedures() {
     
+    let heightNeededForStoredProcedures = document.getElementById("getCarouselImg").naturalHeight + 96
+    heightNeededForStoredProcedures = heightNeededForStoredProcedures.toString() + "px"
+    let storedProceduresDiv = document.getElementById("storedProceduresButtonsDiv")
+
     if (storedProceduresDiv.style.maxHeight != heightNeededForStoredProcedures) {
         storedProceduresDiv.style.maxHeight = heightNeededForStoredProcedures
         document.getElementById("spCollapseSymbol").src = "media/ddk/minus_sign.svg"
