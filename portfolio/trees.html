@@ -20,11 +20,13 @@
 <script>
 
 const urlArr = location.href.split('/');
+const photDemoPathOnGithub = "https://media.githubusercontent.com/media/dneag/dneag.github.io/master/portfolio/Phototropism.mp4"
+const photDemoPathLocal = "file://wsl%24/Ubuntu-18.04/home/danneag/dneag.github.io/portfolio/Phototropism.mp4"
 
 if (urlArr.includes("danneag"))
-    document.getElementById("photDemoSrcElem").src = "file://wsl%24/Ubuntu-18.04/home/danneag/dneag.github.io/portfolio/Phototropism.mp4"
+    document.getElementById("photDemoSrcElem").src = photDemoPathLocal;
 else
-    document.getElementById("photDemoSrcElem").src = "https://media.githubusercontent.com/media/dneag/dneag.github.io/master/Phototropism.mp4"
+    document.getElementById("photDemoSrcElem").src = photDemoPathOnGithub;
 
 console.log("Phototropism demo src: ", document.getElementById("photDemoSrcElem").src)
 document.getElementById("photDemoVidElem").load()
