@@ -1,0 +1,12 @@
+
+.rightCenterY {
+
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+
+.maxHeightTrans {
+
+    transition: max-height 0.3s ease-out;
+}

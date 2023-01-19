@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="../dist/output.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <title>DDK Review</title>
     </head>
     <body class="bg-inherit overflow-y-scroll">
@@ -24,29 +25,27 @@ The game data for the website is accessed through the rawg.io API.
 
             <p class="mt-3">My Contribution:</p>
 
-            <button onclick="toggleSchema()"
+            <button onclick="toggleDiv(['schemaImg'], 'schemaDiv', 'schemaCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Help design database schema
-                    <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
-                         style="top: 50%; transform: translateY(-50%); right: 12px;">
+                    <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY"
+                         >
             </button>
-            <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
+            <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200 maxHeightTrans">
                 <img id="schemaImg" src="media/ddk/DDK-Review-Schema.jpg" class="mx-auto my-4 rounded-xl border-2 border-gray-700">
             </div>
-            <button onclick="toggleStoredProcedures()"
+            <button onclick="toggleDiv(['getCarouselImg'], 'storedProceduresButtonsDiv', 'spCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Write all stored procedures
-                    <img id="spCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
-                         style="top: 50%; transform: translateY(-50%); right: 12px;">
+                    <img id="spCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
             </button>
-            <div id="storedProceduresButtonsDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
-                <button onclick="toggleGetCarousel()"
+            <div id="storedProceduresButtonsDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200 maxHeightTrans">
+                <button onclick="toggleDiv(['getCarouselImg'], 'getCarouselDiv', 'getCaroCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
                     get_carousel()
-                    <img id="getCaroCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6"
-                         style="top: 50%; transform: translateY(-50%); right: 12px;">
+                    <img id="getCaroCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
                 </button>
-                <div id="getCarouselDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200" style="transition: max-height 0.2s ease-out;">
+                <div id="getCarouselDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
                     <img id="getCarouselImg" src="media/ddk/get_carousel.png" class=" my-4 rounded-xl border-2 border-gray-700">
                 </div>
             </div>
@@ -56,55 +55,25 @@ The game data for the website is accessed through the rawg.io API.
 
 <script>
 
-function toggleSchema() {
+function toggleDiv(contentID, divID, collapseSymbolID) {
+    
+    let heightNeeded = 0;
 
-    let schemaImageDivHeight = document.getElementById("schemaImg").naturalHeight + 96
-    let schemaImageOpenedHeight = schemaImageDivHeight.toString() + "px"
-    let schemaDiv = document.getElementById("schemaDiv")
+    for (id of contentID) 
+        heightNeeded += document.getElementById(id).naturalHeight + 96;
 
-    console.log("schema image height when opened: ", schemaImageOpenedHeight)
-    if (schemaDiv.style.maxHeight != schemaImageOpenedHeight) {
-        schemaDiv.style.maxHeight = schemaImageOpenedHeight
-        document.getElementById("schemaCollapseSymbol").src = "media/ddk/minus_sign.svg"
-        console.log("exiting with maxheight: ", schemaDiv.style.maxHeight )
+    heightNeeded = heightNeeded.toString() + "px"
+    let div = document.getElementById(divID)
+
+    if (div.style.maxHeight != heightNeeded) {
+
+        div.style.maxHeight = heightNeeded
+        document.getElementById(collapseSymbolID).src = "media/ddk/minus_sign.svg"
     }
     else {
-        schemaDiv.style.maxHeight = "0px"
-        document.getElementById("schemaCollapseSymbol").src = "media/ddk/plus_sign.svg"
-        console.log("exiting with maxheight: ", schemaDiv.style.maxHeight )
-    }
-    
-}
 
-function toggleGetCarousel() {
-    
-    let getCarouselImageDivHeight = document.getElementById("getCarouselImg").naturalHeight + 96
-    let getCarouselImageOpenedHeight = getCarouselImageDivHeight.toString() + "px"
-    let getCarouselDiv = document.getElementById("getCarouselDiv")
-
-    if (getCarouselDiv.style.maxHeight != getCarouselImageOpenedHeight) {
-        getCarouselDiv.style.maxHeight = getCarouselImageOpenedHeight
-        document.getElementById("getCaroCollapseSymbol").src = "media/ddk/minus_sign.svg"
-    }
-    else {
-        getCarouselDiv.style.maxHeight = "0px"
-        document.getElementById("getCaroCollapseSymbol").src = "media/ddk/plus_sign.svg"
-    }
-}
-
-function toggleStoredProcedures() {
-    
-    let heightNeededForStoredProcedures = document.getElementById("getCarouselImg").naturalHeight + 96
-    heightNeededForStoredProcedures = heightNeededForStoredProcedures.toString() + "px"
-    let storedProceduresDiv = document.getElementById("storedProceduresButtonsDiv")
-
-    if (storedProceduresDiv.style.maxHeight != heightNeededForStoredProcedures) {
-        storedProceduresDiv.style.maxHeight = heightNeededForStoredProcedures
-        document.getElementById("spCollapseSymbol").src = "media/ddk/minus_sign.svg"
-    }
-    else {
-        storedProceduresDiv.style.maxHeight = "0px"
-        document.getElementById("spCollapseSymbol").src = "media/ddk/plus_sign.svg"
+        div.style.maxHeight = "0px"
+        document.getElementById(collapseSymbolID).src = "media/ddk/plus_sign.svg"
     }
 }
 
