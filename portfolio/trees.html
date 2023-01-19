@@ -9,8 +9,8 @@
     <body class="bg-inherit">
         <div class="mx-16 mt-8 font-light">
             <p>Phototropism demo</p>
-            <video class="aspect-auto w-4/5" controls>
-                <source id="photDemoSrc" src="" type="video/mp4">
+            <video id="photDemoVidElem" class="aspect-auto w-4/5" controls>
+                <source id="photDemoSrcElem" src="" type="video/mp4">
               Your browser does not support the video tag.
             </video>
         </div>
@@ -19,5 +19,14 @@
 
 <script>
 
-console.log(document.getElementById("photDemoSrc").src)
+const urlArr = location.href.split('/');
+
+if (urlArr.includes("danneag"))
+    document.getElementById("photDemoSrcElem").src = "file://wsl%24/Ubuntu-18.04/home/danneag/dneag.github.io/portfolio/Phototropism.mp4"
+else
+    document.getElementById("photDemoSrcElem").src = "https://media.githubusercontent.com/media/dneag/dneag.github.io/master/Phototropism.mp4"
+
+console.log("Phototropism demo src: ", document.getElementById("photDemoSrcElem").src)
+document.getElementById("photDemoVidElem").load()
+
 </script>
