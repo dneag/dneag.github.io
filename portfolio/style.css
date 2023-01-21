@@ -1,4 +1,20 @@
 
+:root {
+    
+    --titleBarHeight: 11%;
+}
+
+.titleBarHeight {
+
+    height: var(--titleBarHeight);
+}
+
+.contentHeight {
+
+    height: calc(100% - var(--titleBarHeight));
+    max-height: calc(100% - var(--titleBarHeight));
+}
+
 .rightCenterY {
 
     top: 50%;
@@ -9,4 +25,10 @@
 .maxHeightTrans {
 
     transition: max-height 0.3s ease-out;
+}
+
+.sideBarAndContent {
+
+    display: grid;
+    grid-template-columns: minmax(0,2fr) 8fr;
 }
