@@ -34,7 +34,7 @@ The game data for the website is accessed through the rawg.io API.
             <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200 maxHeightTrans">
                 <img id="schemaImg" src="media/ddk/DDK-Review-Schema.jpg" class="mx-auto my-4 rounded-xl border-2 border-gray-700">
             </div>
-            <button onclick="toggleDiv(['getCarouselImg'], 'storedProceduresButtonsDiv', 'spCollapseSymbol')"
+            <button onclick="toggleDiv(['getCarouselImg','updateRatingImg'], 'storedProceduresButtonsDiv', 'spCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Write all stored procedures
                     <img id="spCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
@@ -47,6 +47,14 @@ The game data for the website is accessed through the rawg.io API.
                 </button>
                 <div id="getCarouselDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
                     <img id="getCarouselImg" src="media/ddk/get_carousel.png" class=" my-4 rounded-xl border-2 border-gray-700">
+                </div>
+                <button onclick="toggleDiv(['updateRatingImg'], 'updateRatingDiv', 'updateRatingCollapseSymbol')"
+                    class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
+                    update_rating()
+                    <img id="updateRatingCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
+                </button>
+                <div id="updateRatingDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
+                    <img id="updateRatingImg" src="media/ddk/update_rating.png" class=" my-4 rounded-xl border-2 border-gray-700">
                 </div>
             </div>
         </div>

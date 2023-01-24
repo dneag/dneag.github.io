@@ -29,6 +29,9 @@
 
 .sideBarAndContent {
 
+    /*  Note to self: by default, grid columns have a minimum width of the content inside them, which can cause overflows
+        to behave unexpectedly.  To avoid this, explicitly set the minimum width of the column - done here with minmax */
+        
     display: grid;
     grid-template-columns: minmax(0,2fr) 8fr;
 }
