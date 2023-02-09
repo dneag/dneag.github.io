@@ -28,12 +28,44 @@ The game data for the website is accessed through the rawg.io API.
             <button onclick="toggleDiv(['schemaImg'], 'schemaDiv', 'schemaCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Help design database schema
-                    <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY"
-                         >
+                    <img id="schemaCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
             </button>
             <div id="schemaDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200 maxHeightTrans">
                 <img id="schemaImg" src="media/ddk/DDK-Review-Schema.jpg" class="mx-auto my-4 rounded-xl border-2 border-gray-700">
             </div>
+
+            <button onclick="toggleDiv(['inputDDImg','dropdownImg','upsertTablesImg'], 'vueCompsDiv', 'vueCompCollapseSymbol')"
+                    class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
+                    Vue components
+                    <img id="vueCompCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
+            </button>
+            <div id="vueCompsDiv" class="max-h-0 w-5/6 overflow-hidden bg-slate-200 maxHeightTrans">
+                <button onclick="toggleDiv(['inputDDImg'], 'inputDDDiv', 'inputDDCollapseSymbol')"
+                    class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
+                    InputDD.vue
+                    <img id="inputDDCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
+                </button>
+                <div id="inputDDDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
+                    <img id="inputDDImg" src="media/ddk/inputDD.png" class=" my-4 rounded-xl border-2 border-gray-700">
+                </div>
+                <button onclick="toggleDiv(['dropdownImg'], 'dropdownDiv', 'dropdownCollapseSymbol')"
+                    class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
+                    Dropdown.vue
+                    <img id="dropdownCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
+                </button>
+                <div id="dropdownDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
+                    <img id="dropdownImg" src="media/ddk/Dropdown.png" class=" my-4 rounded-xl border-2 border-gray-700">
+                </div>
+                <button onclick="toggleDiv(['upsertTablesImg'], 'upsertTableslDiv', 'upsertTablesCollapseSymbol')"
+                    class="bg-slate-200 rounded-sm w-full text-left pl-8 relative hover:bg-slate-300">
+                    UpsertTables.js
+                    <img id="upsertTablesCollapseSymbol" src="media/ddk/plus_sign.svg" class="absolute h-4/6 rightCenterY">
+                </button>
+                <div id="upsertTableslDiv" class="max-h-0 w-5/6 mx-auto overflow-hidden bg-slate-200 maxHeightTrans">
+                    <img id="upsertTablesImg" src="media/ddk/upsertTables.png" class=" my-4 rounded-xl border-2 border-gray-700">
+                </div>
+            </div>
+
             <button onclick="toggleDiv(['getCarouselImg','updateRatingImg'], 'storedProceduresButtonsDiv', 'spCollapseSymbol')"
                     class="bg-slate-200 rounded-sm w-5/6 text-left mt-1 pl-4 relative hover:bg-slate-300">
                     Write all stored procedures
