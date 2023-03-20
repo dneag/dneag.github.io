@@ -565,12 +565,12 @@ video {
   margin-top: 1rem;
 }
 
-.flex {
-  display: flex;
+.ml-4 {
+  margin-left: 1rem;
 }
 
-.grid {
-  display: grid;
+.flex {
+  display: flex;
 }
 
 .aspect-auto {
@@ -609,20 +609,8 @@ video {
   width: 80%;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -728,12 +716,31 @@ video {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-light {
   font-weight: 300;
 }
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-inherit {
