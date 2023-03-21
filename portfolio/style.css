@@ -11,8 +11,8 @@
 
 .contentHeight {
 
-    height: calc(100% - var(--titleBarHeight));
-    max-height: calc(100% - var(--titleBarHeight));
+    height: calc(100vh - var(--titleBarHeight));
+    max-height: calc(100vh - var(--titleBarHeight));
 }
 
 .rightCenterY {
