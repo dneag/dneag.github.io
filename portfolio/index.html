@@ -9,18 +9,20 @@
     </head>
     <body class="bg-slate-50 h-screen" onload="handleQueryString()">
         <div class="titleBarHeight">
-            <h1 class="text-5xl text-inherit font-light px-12 pt-5">Dan Neag - Portfolio</h1>
-            <hr class="h-px my-3 border-0 bg-gradient-to-r from-gray-700">
+            <h1 class="text-inherit font-light titleAdjust">Dan Neag - Portfolio</h1>
+            
         </div>
+        <hr class="h-px border-0 bg-gradient-to-r from-gray-700">
         <div class="overflow-hidden sideBarAndContent contentHeight">
-            <div class=" bg-slate-200 pl-14 mt-2 rounded-lg overflow-hidden">
+            <div class=" bg-slate-200 sideBarPadding rounded-lg overflow-hidden">
                 <div>
                     <button id="resumeButton" onclick="setQueryString('Dan_Neag_Resume.pdf')" 
-                            class="font-light hover:text-gray-400 w-full text-left"
-                            style="font-size: 32px;">Resume</button>
-                    <hr class="h-px w-4/5 border-0 bg-gradient-to-r from-gray-700">
+                            class="font-light hover:text-gray-400 w-full text-left resumeFont">
+                        Resume
+                    </button>
+                    <hr class="h-px border-0 bg-gradient-to-r from-gray-700">
                 </div>
-                <div class="mt-4 font-light space-y-1" style="font-size: 19px;">
+                <div class="mt-4 font-light space-y-1 sideBarButtonFont">
                     <button id="treesButton" onclick="setQueryString('trees.html')"
                             class="hover:text-gray-400 w-full text-left">Trees</button><br>
                     <button id="ddkButton" onclick="setQueryString('ddk-review.html')"
@@ -37,7 +39,6 @@
 <script>
 
 const navButtons = new Map();
-
 navButtons.set('Dan_Neag_Resume.pdf', document.getElementById("resumeButton"));
 navButtons.set('trees.html', document.getElementById("treesButton"));
 navButtons.set('ddk-review.html', document.getElementById("ddkButton"));

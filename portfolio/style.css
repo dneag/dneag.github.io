@@ -15,6 +15,42 @@
     max-height: calc(100vh - var(--titleBarHeight));
 }
 
+.sideBarPadding {
+
+    padding-left: 4vw;
+}
+
+.titleAdjust {
+
+    font-size: 6vh;
+    padding-left: 2vw;
+}
+
+.resumeFont {
+
+    font-size: 2.5vw;
+}
+
+.sideBarButtonFont {
+
+    font-size: 1.5vw;
+}
+
+.ddkParagraph {
+
+    width: 75vw;
+}
+
+.treesContent {
+
+    width: 75vw;
+}
+
+.treesParagraph {
+
+    width: 40vw;
+}
+
 .rightCenterY {
 
     top: 50%;
@@ -34,4 +70,9 @@
         
     display: grid;
     grid-template-columns: minmax(0,2fr) 8fr;
+}
+
+.sideBarButtonWidth {
+
+    font-size: 10vw;
 }
