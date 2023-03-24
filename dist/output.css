@@ -521,14 +521,6 @@ video {
   position: relative;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -542,11 +534,6 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 .mt-8 {
@@ -565,20 +552,16 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
-.mb-px {
-  margin-bottom: 1px;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .flex {
@@ -605,27 +588,6 @@ video {
   height: 100%;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -638,29 +600,16 @@ video {
   width: 83.333333%;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 .w-1\/2 {
   width: 50%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.gap-12 {
-  gap: 3rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -689,12 +638,20 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
 
 .border-0 {
   border-width: 0px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-gray-700 {
@@ -736,9 +693,13 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.p-1 {
+  padding: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pl-4 {
@@ -749,33 +710,8 @@ video {
   padding-left: 2rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pl-14 {
-  padding-left: 3.5rem;
-}
-
-.pl-3\.5 {
-  padding-left: 0.875rem;
-}
-
-.pl-3 {
-  padding-left: 0.75rem;
-}
-
-.pl-12 {
-  padding-left: 3rem;
-}
-
 .text-left {
   text-align: left;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-xl {
