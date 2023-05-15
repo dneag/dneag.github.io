@@ -513,10 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -525,36 +521,12 @@ video {
   position: relative;
 }
 
-.right-2 {
-  right: 0.5rem;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
 
 .right-8 {
   right: 2rem;
-}
-
-.right-12 {
-  right: 3rem;
 }
 
 .mx-16 {
@@ -592,16 +564,8 @@ video {
   margin-top: 1rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .ml-4 {
   margin-left: 1rem;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
