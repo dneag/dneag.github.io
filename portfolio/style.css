@@ -15,6 +15,55 @@
     max-height: calc(100vh - var(--titleBarHeight));
 }
 
+.contentMargin {
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.gap2vw {
+
+    gap: 2vw;
+}
+
+.marginx3vw {
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.padx4vw {
+
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.ddTextPadMargin {
+
+    margin-top: 1vh;
+    padding-left: 3vw;
+}
+
+.ddImageMargin {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.contentPFontSize {
+
+    font-size: 2.8vh;
+}
+
+.contentPHeaderSize {
+
+    font-size: 3vh;
+}
+
 .sideBarPadding {
 
     padding-left: 4vw;
@@ -36,11 +85,6 @@
     font-size: 2vw;
 }
 
-.ddkParagraph {
-
-    width: 75vw;
-}
-
 .treesContent {
 
     width: 75vw;
@@ -55,7 +99,7 @@
 
     top: 50%;
     transform: translateY(-50%);
-    right: 12px;
+    right: 4vw;
 }
 
 .maxHeightTrans {
