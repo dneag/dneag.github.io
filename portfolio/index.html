@@ -31,67 +31,67 @@
                 <iframe id="content" title="contentIframe" src="" target="_parent" class="h-full w-full"></iframe>
             </div>
         </div>
-    </body>
-</html>
-
 <script>
 
-const navButtons = new Map();
-navButtons.set('Dan_Neag_Resume.pdf', document.getElementById("resumeButton"));
-navButtons.set('trees.html', document.getElementById("treesButton"));
-navButtons.set('ddk-review.html', document.getElementById("ddkButton"));
-navButtons.set('tech-art.html', document.getElementById("techArtButton"));
-
-// Replaces the current url to include the new query string
-// This triggers index.html's onload function, handleQueryString(), which will then trigger
-//    setContent(), which will set the html file for the content iframe
-function setQueryString(contentValue) {
-
-    const newQuery = "?content=" + contentValue;
-    const oldQuery = window.location.search.substring(0);
-    let newURL;
-
-    if (newQuery != oldQuery) {
-
-        if (oldQuery === "")
-            newURL = window.location.href.concat(newQuery)
-        else 
-            newURL = window.location.href.replace(oldQuery, newQuery)
-
-        window.location.replace(newURL)
-    }
-}
-
-function handleQueryString() {
-
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-
-        var pair = vars[i].split('=');
-        if (pair[0] == 'content') {
-            setcontent(pair[1])
+    const navButtons = new Map();
+    navButtons.set('Dan_Neag_Resume.pdf', document.getElementById("resumeButton"));
+    navButtons.set('trees.html', document.getElementById("treesButton"));
+    navButtons.set('ddk-review.html', document.getElementById("ddkButton"));
+    navButtons.set('tech-art.html', document.getElementById("techArtButton"));
+    
+    // Replaces the current url to include the new query string
+    // This triggers index.html's onload function, handleQueryString(), which will then trigger
+    //    setContent(), which will set the html file for the content iframe
+    function setQueryString(contentValue) {
+    
+        const newQuery = "?content=" + contentValue;
+        const oldQuery = window.location.search.substring(0);
+        let newURL;
+    
+        if (newQuery != oldQuery) {
+    
+            if (oldQuery === "")
+                newURL = window.location.href.concat(newQuery)
+            else 
+                newURL = window.location.href.replace(oldQuery, newQuery)
+    
+            window.location.replace(newURL)
         }
     }
-}
-
-function setcontent(newPage) {
     
-    let currentURLArr = document.getElementById("content").src.split('/');
-    let currentPage = currentURLArr[currentURLArr.length - 1].split("?")[0]
-
-    if (currentPage != newPage) {
-
-        const buttonFade = ["bg-gradient-to-l", "from-slate-50"];
-
-        const currentButton = navButtons.get(currentPage)
-        if (currentButton != undefined)
-            currentButton.classList.remove(buttonFade[0], buttonFade[1])
-
-        navButtons.get(newPage).classList.add(buttonFade[0], buttonFade[1])
-
-        document.getElementById("content").src = newPage
+    function handleQueryString() {
+    
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+    
+            var pair = vars[i].split('=');
+            if (pair[0] == 'content') {
+                setcontent(pair[1])
+            }
+        }
     }
-}
-
+    
+    function setcontent(newPage) {
+        
+        let currentURLArr = document.getElementById("content").src.split('/');
+        let currentPage = currentURLArr[currentURLArr.length - 1].split("?")[0]
+    
+        if (currentPage != newPage) {
+    
+            const buttonFade = ["bg-gradient-to-l", "from-slate-50"];
+    
+            const currentButton = navButtons.get(currentPage)
+            if (currentButton != undefined)
+                currentButton.classList.remove(buttonFade[0], buttonFade[1])
+    
+            navButtons.get(newPage).classList.add(buttonFade[0], buttonFade[1])
+    
+            document.getElementById("content").src = newPage
+        }
+    }
+    
 </script>
+
+    </body>
+</html>
