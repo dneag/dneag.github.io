@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base target="_parent">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../dist/output.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <title>Tech Art</title>
+    </head>
+    <body class="bg-inherit overflow-y-scroll">
+        <div class="w-full contentMargin font-light contentPFontSize">
+            <p>An ahriman from Final Fantasy.  Model, rig, and animation done by me.</p><br>
+            <video id="ahrimanDemoElem" class="aspect-auto w-4/5" controls>
+                <source id="ahrimanDemoSrcElem" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <script src="baseURL.js"></script>
+        <script>
+            document.getElementById("ahrimanDemoSrcElem").src = currentPath + "portfolio/media/ahriman/ahriman_demo.mp4";
+            document.getElementById("ahrimanDemoElem").load()
+        </script>
+    </body>
+</html>

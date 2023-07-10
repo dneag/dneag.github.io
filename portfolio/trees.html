@@ -50,20 +50,13 @@ To the right is a cook pine tree.  All mesh components, including uv's, were gen
                class="text-blue-500 hover:text-blue-400 font-light marginx3vw">Phototropism repo</a>
             <br><br>
         </div>
+        <script src="baseURL.js"></script>
+        <script>
+            document.getElementById("treeMakerDemoSrcElem").src = currentPath + "portfolio/media/trees/Treemaker_demo.mp4";
+            document.getElementById("photDemoSrcElem").src = currentPath + "portfolio/media/trees/Phototropism.mp4";
+
+            document.getElementById("treeMakerDemoElem").load()
+            document.getElementById("photDemoVidElem").load()
+        </script>
     </body>
 </html>
-
-<script>
-
-const localRepoPath = "file://wsl%24/Ubuntu-18.04/home/danneag/dneag.github.io/";
-const githubMediaPath = "https://media.githubusercontent.com/media/dneag/dneag.github.io/main/";
-
-const currentPath = location.href.split('/').includes("danneag") ? localRepoPath : githubMediaPath;
-
-document.getElementById("treeMakerDemoSrcElem").src = currentPath + "portfolio/media/trees/Treemaker_demo.mp4";
-document.getElementById("photDemoSrcElem").src = currentPath + "portfolio/media/trees/Phototropism.mp4";
-
-document.getElementById("treeMakerDemoElem").load()
-document.getElementById("photDemoVidElem").load()
-
-</script>

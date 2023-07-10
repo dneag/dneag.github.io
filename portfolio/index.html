@@ -23,6 +23,8 @@
                             class="hover:text-gray-400 w-full text-left">Trees</button><br>
                     <button id="ddkButton" onclick="setQueryString('ddk-review.html')"
                             class="hover:text-gray-400 w-full text-left">DDK Review</button>
+                    <button id="techArtButton" onclick="setQueryString('tech-art.html')"
+                            class="hover:text-gray-400 w-full text-left">Tech Art</button>
                 </div>
             </div>
             <div class="rounded-lg">
@@ -38,6 +40,7 @@ const navButtons = new Map();
 navButtons.set('Dan_Neag_Resume.pdf', document.getElementById("resumeButton"));
 navButtons.set('trees.html', document.getElementById("treesButton"));
 navButtons.set('ddk-review.html', document.getElementById("ddkButton"));
+navButtons.set('tech-art.html', document.getElementById("techArtButton"));
 
 // Replaces the current url to include the new query string
 // This triggers index.html's onload function, handleQueryString(), which will then trigger
