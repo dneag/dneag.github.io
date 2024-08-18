@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/056869f0-bfa3-44f2-b2a6-fadd94877a8c/Knaklesaur_emerge_render.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240817%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20240817T172204Z&X-Amz-Expires=86400&X-Amz-Signature=bf5019a2e41baa041498019181dd0cf951b1a99d905a2978517f599060c04d26&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Knaklesaur_emerge_render.mp4%22&response-content-type=video%2Fmp4&x-id=GetObject

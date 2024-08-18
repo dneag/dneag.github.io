@@ -25,6 +25,8 @@
                             class="hover:text-gray-400 w-full text-left">DDK Review</button>
                     <button id="techArtButton" onclick="setQueryString('tech-art.html')"
                             class="hover:text-gray-400 w-full text-left">Tech Art</button>
+                    <button id="oldStuffButton" onclick="setQueryString('old-stuff.html')"
+                            class="hover:text-gray-400 w-full text-left">Animation</button>
                 </div>
             </div>
             <div class="rounded-lg">
@@ -38,6 +40,7 @@
     navButtons.set('trees.html', document.getElementById("treesButton"));
     navButtons.set('ddk-review.html', document.getElementById("ddkButton"));
     navButtons.set('tech-art.html', document.getElementById("techArtButton"));
+    navButtons.set('old-stuff.html', document.getElementById("oldStuffButton"));
     
     // Replaces the current url to include the new query string
     // This triggers index.html's onload function, handleQueryString(), which will then trigger

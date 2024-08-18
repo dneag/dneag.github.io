@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="style.css" rel="stylesheet">
+        <link href="../dist/output.css" rel="stylesheet">
+        <script src="baseURL.js"></script>
+        <title>Animation</title>
+    </head>
+    <body class="bg-inherit overflow-y-scroll">
+        <div class="w-full flex flex-col items-center font-light contentPFontSize space-y-12">
+            <p class="mt-8 -mb-12">All animations done in Autodesk Maya.  I did not create the models or rigs for these.</p>
+            <br>
+            <video id="knaklesaurVidElem" class="aspect-auto w-2/3 border-4 rounded-xl shadow-md" controls>
+                <source id="knaklesaurVidSrcElem" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video id="ninjaVidElem" class="aspect-auto w-2/3 border-4 rounded-xl shadow-md" controls>
+                <source id="ninjaVidSrcElem" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video id="jboxVidElem" class="aspect-auto w-2/3 border-4 rounded-xl shadow-md" controls>
+                <source id="jboxVidSrcElem" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video id="bossVidElem" class="aspect-auto w-2/3 border-4 rounded-xl shadow-md" controls>
+                <source id="bossVidSrcElem" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <script>
+            document.getElementById("knaklesaurVidSrcElem").src = currentPath + "portfolio/media/old_stuff/Knaklesaur_emerge_render.mp4";
+            document.getElementById("knaklesaurVidElem").load();
+            document.getElementById("jboxVidSrcElem").src = currentPath + "portfolio/media/old_stuff/jbox_render.mp4";
+            document.getElementById("jboxVidElem").load();
+            document.getElementById("bossVidSrcElem").src = currentPath + "portfolio/media/old_stuff/BossEmerge_render.mp4";
+            document.getElementById("bossVidElem").load();
+            document.getElementById("ninjaVidSrcElem").src = currentPath + "portfolio/media/old_stuff/Ninja_Attacks.mp4";
+            document.getElementById("ninjaVidElem").load();
+        </script>
+    </body>
+</html>

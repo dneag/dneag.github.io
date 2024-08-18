@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/c17b9e9d-6eab-4fb5-b0ec-2f8df8f1dc8f/BossEmerge_render.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240817%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20240817T172447Z&X-Amz-Expires=86400&X-Amz-Signature=81119bdccd4156bbfb3583d577c987a9574df7d7069179554ae519103c034b12&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22BossEmerge_render.mp4%22&response-content-type=video%2Fmp4&x-id=GetObject
